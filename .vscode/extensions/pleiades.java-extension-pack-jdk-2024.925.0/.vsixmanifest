@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+		<Metadata>
+			<Identity Language="en-US" Id="java-extension-pack-jdk" Version="2024.925.0" Publisher="Pleiades" />
+			<DisplayName>Extension Pack for Java Auto Config</DisplayName>
+			<Description xml:space="preserve">JDK Auto-Configuration + Extension Pack for Java + Spring Boot Extension Pack</Description>
+			<Tags>asdf,auto,bash,boot,chinese,chocolatey,cmd,command,config,configuration,debug,eclipse,encoding,gradle,highlight,homebrew,ide,intellij,jabba,jakarta,japanese,java_home,java,jdk,jenv,junit,lombok,lsp,maven,mise,multiple,path,plantuml,portuguese,runtime,runtimes,russian,salesforce,scala,scoop,sdkman,server,setting,settings,spanish,spring-boot,spring,terminal,tomcat,uml,vfox,xml,zowe,zsh,__sponsor_extension</Tags>
+			<Categories>Programming Languages,Linters,Debuggers,Formatters,Language Packs,Extension Packs</Categories>
+			<GalleryFlags>Public</GalleryFlags>
+			
+			<Properties>
+				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.92.0" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="vscjava.vscode-java-pack,vmware.vscode-boot-dev-pack,redhat.vscode-xml,streetsidesoftware.code-spell-checker,Gruntfuggly.todo-tree,ritwickdey.LiveServer,shardulm94.trailing-spaces,oderwat.indent-rainbow,mechatroner.rainbow-csv" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace" />
+				<Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+				
+				<Property Id="Microsoft.VisualStudio.Code.SponsorLink" Value="https://github.com/sponsors/cypher256" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/cypher256/java-extension-pack.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/cypher256/java-extension-pack.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/cypher256/java-extension-pack.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Support" Value="https://github.com/cypher256/java-extension-pack/issues" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://github.com/cypher256/java-extension-pack#readme" />
+				
+				
+				<Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+				<Property Id="Microsoft.VisualStudio.Services.Content.Pricing" Value="Free"/>
+
+				
+				
+			</Properties>
+			<License>extension/LICENSE.md</License>
+			<Icon>extension/README_icon.png</Icon>
+		</Metadata>
+		<Installation>
+			<InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+		</Installation>
+		<Dependencies/>
+		<Assets>
+			<Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/README_icon.png" Addressable="true" />
+		</Assets>
+	</PackageManifest>

@@ -1,0 +1,160 @@
+{
+	"name": "java-extension-pack-jdk",
+	"displayName": "Extension Pack for Java Auto Config",
+	"description": "JDK Auto-Configuration + Extension Pack for Java + Spring Boot Extension Pack",
+	"icon": "README_icon.png",
+	"publisher": "Pleiades",
+	"license": "MIT",
+	"repository": {
+		"url": "https://github.com/cypher256/java-extension-pack.git"
+	},
+	"sponsor": {
+		"url": "https://github.com/sponsors/cypher256"
+	},
+	"author": {
+		"name": "Shinji Kashihara"
+	},
+	"keywords": [
+		"asdf",
+		"auto",
+		"bash",
+		"boot",
+		"chinese",
+		"chocolatey",
+		"cmd",
+		"command",
+		"config",
+		"configuration",
+		"debug",
+		"eclipse",
+		"encoding",
+		"gradle",
+		"highlight",
+		"homebrew",
+		"ide",
+		"intellij",
+		"jabba",
+		"jakarta",
+		"japanese",
+		"java_home",
+		"java",
+		"jdk",
+		"jenv",
+		"junit",
+		"lombok",
+		"lsp",
+		"maven",
+		"mise",
+		"multiple",
+		"path",
+		"plantuml",
+		"portuguese",
+		"runtime",
+		"runtimes",
+		"russian",
+		"salesforce",
+		"scala",
+		"scoop",
+		"sdkman",
+		"server",
+		"setting",
+		"settings",
+		"spanish",
+		"spring-boot",
+		"spring",
+		"terminal",
+		"tomcat",
+		"uml",
+		"vfox",
+		"xml",
+		"zowe",
+		"zsh"
+	],
+	"categories": [
+		"Programming Languages",
+		"Linters",
+		"Debuggers",
+		"Formatters",
+		"Language Packs",
+		"Extension Packs"
+	],
+	"extensionDependencies": [],
+	"extensionPack": [
+		"vscjava.vscode-java-pack",
+		"vmware.vscode-boot-dev-pack",
+		"redhat.vscode-xml",
+		"streetsidesoftware.code-spell-checker",
+		"Gruntfuggly.todo-tree",
+		"ritwickdey.LiveServer",
+		"shardulm94.trailing-spaces",
+		"oderwat.indent-rainbow",
+		"mechatroner.rainbow-csv"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./dist/main.js",
+	"l10n": "./l10n",
+	"contributes": {
+		"configuration": {
+			"title": "Java Auto Config",
+			"properties": {
+				"javaAutoConfig.enabled": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%description.enabled%"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run esbuild-base -- --minify",
+		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=dist/main.js --external:vscode --format=cjs --platform=node",
+		"esbuild": "npm run esbuild-base -- --sourcemap",
+		"esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+		"eslint": "eslint .",
+		"update": "npm update && npm run eslint && ncu -x @types/vscode && ts-node package.json.update.mjs",
+		"package": "npx vsce package --out dist/a.vsix",
+		"package-install": "npm run package && code --install-extension dist/a.vsix"
+	},
+	"engines": {
+		"vscode": "^1.92.0"
+	},
+	"devDependencies": {
+		"@types/decompress": "4.x",
+		"@types/lodash": "4.x",
+		"@types/node": "22.x",
+		"@types/vscode": "^1.92.0",
+		"@types/which": "3.x",
+		"@vscode/l10n-dev": "0.x",
+		"esbuild": "0.x",
+		"ts-node": "10.x",
+		"typescript": "5.5.x",
+		"typescript-eslint": "8.x"
+	},
+	"dependencies": {
+		"axios": "1.x",
+		"compare-versions": "6.x",
+		"decompress": "4.x",
+		"glob": "11.x",
+		"jdk-utils": "0.x",
+		"lodash": "4.x"
+	},
+	"volta": {
+		"node": "20.17.0"
+	},
+	"version": "2024.925.0",
+	"__metadata": {
+		"id": "7785e3d4-2543-43e3-b3c1-ba677f233c1f",
+		"publisherId": "5b4059a2-b7e2-4c54-9c71-d857bc8de8cc",
+		"publisherDisplayName": "Pleiades",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1728036485646,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}
