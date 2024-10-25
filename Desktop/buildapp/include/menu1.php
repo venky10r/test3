@@ -1,0 +1,12 @@
+<li><a href="index.php">Home</a></li>
+                <?php
+                    if(isset($_SESSION['user'])){
+                        ?>
+                         <li><a href="bookings/">Bookings</a></li>
+                         <li><a href="requests/">Requests</a></li>
+                         <li><a href="profile/">Profile</a></li>
+                <?php
+                    }
+                ?>
+<!--                <li><a href="about.php">About us</a></li>
+		<li><a href="contact.php">Contact</a></li>-->
